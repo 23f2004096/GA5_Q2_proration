@@ -12,7 +12,7 @@ class ProrationRequest(BaseModel):
     spec: str
 
 
-@app.post("/")
+@app.post("/charge")
 def calculate_charge(data: ProrationRequest):
 
     difference = data.new_price - data.old_price
